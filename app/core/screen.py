@@ -2,11 +2,10 @@ import numpy as np
 
 class Screen:
 
-    def __init__(self, background: np.ndarray, img_bottom: int) -> None:
+    def __init__(self, background: np.ndarray) -> None:
         self.background = background
         self.shape = background.shape
         self.display_img = np.copy(background)
-        self.pos_img_bottom = (0, img_bottom)
 
     def draw(self, image: np.ndarray, pos: tuple) -> np.ndarray:
         x, y = pos

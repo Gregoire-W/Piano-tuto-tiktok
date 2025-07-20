@@ -11,5 +11,5 @@ if __name__ == "__main__":
         output_dir=Path("./output"),
         fps=30,
         sf2_path=Path("public\sf2\MuseScore_General.sf2"),
-        #sf2_path=Path("public\sf2\piano.sf2"),
+        timing=5,
     )
