@@ -1,5 +1,4 @@
 import numpy as np
-from app.utils import get_tile
 import cv2
 
 class Piano:
@@ -19,7 +18,6 @@ class Piano:
 
     def add_white_tiles(self, image, num_white_tiles):
         start = self.left_px // 2 + 1
-        dict_count = 0
         for count, (tile_number, tyle_type) in enumerate(zip(num_white_tiles[:2], [2, 3])):
             points = self.get_tile(tyle_type, (start, 0))
             cv2.fillPoly(image, [points], (255, 255, 255))
